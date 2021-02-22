@@ -3,6 +3,7 @@
 
 ## Table of content
 
+* [Table of content](#table-of-content)
 * [Installation](#installation)
 * [Hardware](#hardware)
 * [Web client](#web-client)
@@ -10,8 +11,12 @@
     - [About `filenamePattern`](#about-filenamepattern)
   + [Note on static assets](#note-on-static-assets)
 * [Generating the video](#generating-the-video)
+  + [Install ImageMagick and verify your dependencies](#install-imagemagick-and-verify-your-dependencies)
+  + [Basic Fourier transform using ImageMagick](#basic-fourier-transform-using-imagemagick)
+  + [Generate the PNG sequence](#generate-the-png-sequence)
+  + [Build the video from the PNG sequence](#build-the-video-from-the-png-sequence)
 * [Development](#development)
-* [License](#license)
+* [License](#license)%
 
 <br>
 <br>
