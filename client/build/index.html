@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+  <title>Arza | 0.1.0</title>
+  <link rel="stylesheet" href="e1305caf389d837bc5d5.css">
+</head>
+<body class="">
+  <main>
+    <video></video>
+    <div id='launchMessage'>
+      click anywhere on screen to launch the experiment
+    </div>
+    <div id='logger'></div>
+  </main>
+  <script type="text/javascript">
+    window.ENV = Object.assign({
+      production:
+        !!~window.location.hash.indexOf('#production') ||
+        (true && !~window.location.hash.indexOf('#dev')),
+      name: "arza",
+      devServer: "false",
+      version: "0.1.0",
+      lang: "en"
+    }, {
+  "forceLogger": false,
+  "hardware": {
+    "key": "p"
+  },
+  "video": {
+    "source": "arza-crop-pp.mp4",
+    "passivePlaybackRate": 0.25,
+    "activePlaybackRate": 10
+  },
+  "SfxHandler": {
+    "soundsLength": 4,
+    "speakersLength": 6,
+    "filenamePattern": "sfx/{{speakerIndex:1}}_AZ_Sfx{{soundIndex:01}}.wav"
+  },
+  "DroneHandler": {
+    "soundsLength": 6,
+    "filenamePattern": "drones/Drones_AZ_{{soundIndex:01}}.wav"
+  }
+})
+  </script>
+  <script src="e1305caf389d837bc5d5.js"></script>
+</body>
+</html>

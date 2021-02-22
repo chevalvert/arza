@@ -1,0 +1,48 @@
+@import 'sass/reset';
+@import 'sass/helpers';
+
+body {
+  @include no-select;
+  background: black;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  color: white;
+  font-size: 14px;
+  line-height: 1.6em;
+}
+
+video {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+#launchMessage {
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 70%;
+}
+
+body.is-running #launchMessage {
+  display: none;
+}
+
+#logger {
+  white-space: pre-line;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  height: auto;
+  padding: 2em;
+}
+
+#logger .log { color: white; }
+#logger .warn { color: yellow; }
+#logger .error { color: red; }

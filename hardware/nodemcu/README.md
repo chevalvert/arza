@@ -1,0 +1,5 @@
+- Board: NodeMCU 1.0 (ESP-12E Module)
+- Upload Speed: 115200
+- CPU Frequency: 80 Mhz
+- Flash Size: 4Mb (FS:2Mb OTA:~1019KB)
+- Programmer: AVRISP mkII
