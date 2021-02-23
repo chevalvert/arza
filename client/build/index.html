@@ -5,8 +5,8 @@
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
-  <title>Arza | 0.1.0</title>
-  <link rel="stylesheet" href="e1305caf389d837bc5d5.css">
+  <title>Arza | 1.0.0</title>
+  <link rel="stylesheet" href="6dac01ff5d8d406f48bd.css">
 </head>
 <body class="">
   <main>
@@ -23,29 +23,38 @@
         (true && !~window.location.hash.indexOf('#dev')),
       name: "arza",
       devServer: "false",
-      version: "0.1.0",
+      version: "1.0.0",
       lang: "en"
     }, {
-  "forceLogger": false,
+  "app": {
+    "logger": false,
+    "fullscreen": false
+  },
   "hardware": {
     "key": "p"
   },
   "video": {
     "source": "arza-crop-pp.mp4",
     "passivePlaybackRate": 0.25,
-    "activePlaybackRate": 10
+    "activePlaybackRate": 10,
+    "triggerDuration": [
+      500,
+      1000
+    ]
   },
   "SfxHandler": {
-    "soundsLength": 4,
+    "soundsLength": 43,
     "speakersLength": 6,
+    "maxConcurrentPlays": 2,
     "filenamePattern": "sfx/{{speakerIndex:1}}_AZ_Sfx{{soundIndex:01}}.wav"
   },
   "DroneHandler": {
+    "volume": 0.75,
     "soundsLength": 6,
     "filenamePattern": "drones/Drones_AZ_{{soundIndex:01}}.wav"
   }
 })
   </script>
-  <script src="e1305caf389d837bc5d5.js"></script>
+  <script src="6dac01ff5d8d406f48bd.js"></script>
 </body>
 </html>
