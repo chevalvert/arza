@@ -41,6 +41,10 @@ body.is-running #launchMessage {
   background: rgba(0, 0, 0, 0.7);
   height: auto;
   padding: 2em;
+
+  &:empty {
+    display: none;
+  }
 }
 
 #logger .log { color: white; }

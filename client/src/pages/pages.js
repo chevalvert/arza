@@ -3,7 +3,10 @@
 // if necessary
 
 const USER_CONFIG = {
-  forceLogger: false,
+  app: {
+    logger: false, // Will be forced to true in not dev
+    fullscreen: false
+  },
 
   hardware: {
     key: 'p'
@@ -12,16 +15,19 @@ const USER_CONFIG = {
   video: {
     source: 'arza-crop-pp.mp4',
     passivePlaybackRate: 0.25,
-    activePlaybackRate: 10
+    activePlaybackRate: 10,
+    triggerDuration: [500, 1000] // ms
   },
 
   SfxHandler: {
-    soundsLength: 4,
+    soundsLength: 43,
     speakersLength: 6,
+    maxConcurrentPlays: 2,
     filenamePattern: 'sfx/{{speakerIndex:1}}_AZ_Sfx{{soundIndex:01}}.wav'
   },
 
   DroneHandler: {
+    volume: 0.75,
     soundsLength: 6,
     filenamePattern: 'drones/Drones_AZ_{{soundIndex:01}}.wav'
   }

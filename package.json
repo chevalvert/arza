@@ -48,12 +48,10 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
-    "@internet/raf": "^0.2.1",
     "howler": "^2.2.1",
     "missing-math": "^3.2.0"
   },
   "private": false,
-  "optionalDependencies": {},
   "homepage": "https://github.com/chevalvert/arza#readme",
   "bugs": {
     "url": "https://github.com/chevalvert/arza/issues"

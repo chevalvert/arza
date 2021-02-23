@@ -6,6 +6,7 @@ Howler.autoUnlock = false
 
 export default class DroneHandler {
   constructor ({
+    volume = window.ENV.DroneHandler.volume,
     soundsLength = window.ENV.DroneHandler.soundsLength,
     filenamePattern = window.ENV.DroneHandler.filenamePattern
   } = {}) {
@@ -15,6 +16,7 @@ export default class DroneHandler {
     this.sounds = []
     for (let soundIndex = 0; soundIndex < soundsLength; soundIndex++) {
       this.sounds.push(new Howl({
+        volume,
         src: sequence(filenamePattern, { soundIndex }),
         preload: false,
         onend: this.playNext

@@ -20,7 +20,7 @@ function escapeHtml (unsafe) {
 }
 
 export function log (message, method = 'log') {
-  if (!window.ENV.forceLogger && window.ENV.production) return
+  if (!window.ENV.app.logger) return
   if (entries.length >= HISTORY_LENGTH) entries.shift()
 
   if (lastEntry && lastEntry.message === message) {
