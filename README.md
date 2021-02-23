@@ -49,25 +49,32 @@ In both cases, the option object is described below:
 
 ```js
 {
-  forceLogger: false, // Display logging informations, useful for debugging without devtools
+
+  app: {
+    logger: false, // Display logging informations, useful for debugging without devtools
+    fullscreen: true
+  },
 
   hardware: {
     key: 'p' // Key triggered by the Arza custom hardware
   },
 
   video: {
-    source: 'arza-crop-pp.mp4', // Source of the video
-    passivePlaybackRate: 0.25,  // Playback rate of the video when no trigger
-    activePlaybackRate: 10      // Playback rate of the video during a trigger
+    source: 'arza-crop-pp.mp4',  // Source of the video
+    passivePlaybackRate: 0.25,   // Playback rate of the video when no trigger
+    activePlaybackRate: 10       // Playback rate of the video during a trigger
+    triggerDuration: [500, 1000] // Range of the random duration for each trigger in ms
   },
 
   SfxHandler: {
-    soundsLength: 4,   // Length of SFX sound files
-    speakersLength: 6, // Length of SFX spatialized versions
+    soundsLength: 4,       // Length of SFX sound files
+    speakersLength: 6,     // Length of SFX spatialized versions
+    maxConcurrentPlays: 6, // Do not play more than X sounds
     filenamePattern: 'sfx/{{speakerIndex:1}}_AZ_Sfx{{soundIndex:01}}.wav'
   },
 
   DroneHandler: {
+    volume: 0.75,     // From 0 to 1
     soundsLength: 6,  // Length of Drone sound files
     filenamePattern: 'drones/Drones_AZ_{{soundIndex:01}}.wav'
   }

@@ -5,7 +5,7 @@
 const USER_CONFIG = {
   app: {
     logger: false, // Will be forced to true in not dev
-    fullscreen: false
+    fullscreen: true
   },
 
   hardware: {
@@ -22,7 +22,7 @@ const USER_CONFIG = {
   SfxHandler: {
     soundsLength: 43,
     speakersLength: 6,
-    maxConcurrentPlays: 2,
+    maxConcurrentPlays: 4,
     filenamePattern: 'sfx/{{speakerIndex:1}}_AZ_Sfx{{soundIndex:01}}.wav'
   },
 
