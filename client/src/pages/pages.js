@@ -14,7 +14,7 @@ const USER_CONFIG = {
 
   video: {
     source: 'arza-crop-pp.mp4',
-    passivePlaybackRate: 0.25,
+    passivePlaybackRate: 0.5,
     activePlaybackRate: 10,
     triggerDuration: [500, 1000] // ms
   },
