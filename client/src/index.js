@@ -6,7 +6,7 @@ import random from 'utils/random'
 warn('Logging is active. Set `app.logger` to false to disable logging.')
 if (!window.ENV.production) window.ENV.app.logger = true
 
-window.addEventListener('click', () => {
+window.addEventListener('keypress', () => {
   try {
     setup()
   } catch (e) {
