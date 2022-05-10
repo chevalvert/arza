@@ -21,6 +21,7 @@ function setup () {
   // Enable fullscreen on production
   if (window.ENV.app.fullscreen && document.body.requestFullscreen) {
     document.body.requestFullscreen()
+    window.setTimeout(() => { document.body.style.cursor = 'none' }, 1000)
   }
 
   // Load the video
