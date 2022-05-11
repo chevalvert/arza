@@ -1,8 +1,10 @@
-server/data/*
 .env
 
 *.mp4
 *.wav
+
+binaries/*
+!binaries/arza-macos.command
 
 ####### NODE ########
 .tmp

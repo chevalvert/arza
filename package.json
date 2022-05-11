@@ -2,11 +2,26 @@
   "name": "arza",
   "version": "1.0.1",
   "description": "Monorepo for the Arza project",
+  "bin": "server/index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development node client/scripts/serve.js",
     "build": "cross-env NODE_ENV=production node client/scripts/build.js",
+    "package": "npm run build && pkg . --output \"binaries/$npm_package_name\" && cp ./node_modules/open/xdg-open ./binaries/xdg-open",
     "version": "npm run build && git add client/build",
     "postversion": "git push && git push --tags"
+  },
+  "pkg": {
+    "assets": [
+      "client/build/**/*"
+    ],
+    "outputPath": "binaries",
+    "targets": [
+      "node14-macos",
+      "node14-win"
+    ]
+  },
+  "engines": {
+    "node": ">=14.17"
   },
   "aliases": {
     "abstractions": "src/abstractions",
@@ -37,6 +52,7 @@
     "handlebars": "^4.0.10",
     "kool-shell": "^1.5.0",
     "node-sass": "^4.5.3",
+    "pkg": "^5.6.0",
     "postcss-loader": "^2.0.6",
     "progress-bar-webpack-plugin": "^1.10.0",
     "prop-types": "^15.6.0",
@@ -48,8 +64,10 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
+    "express": "^4.18.1",
     "howler": "^2.2.1",
-    "missing-math": "^3.2.0"
+    "missing-math": "^3.2.0",
+    "open": "^8.4.0"
   },
   "private": false,
   "homepage": "https://github.com/chevalvert/arza#readme",
